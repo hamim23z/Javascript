@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 - Variables</title>
+</head>
+<body>
+
+    <p>Cart Quantity</p>
+    <button 
+        onclick="console.log(`Cart Quantity: ${cart_quantity}`);">
+        Show Quantity
+    </button>
+    
+    <button 
+        onclick="cart_quantity += 1; console.log(`Cart Quantity: ${cart_quantity}`);">
+        Add to cart
+    </button>
+    
+    <button 
+        onclick="cart_quantity += 2; console.log(`Cart Quantity: ${cart_quantity}`);">
+        +2
+    </button>
+    
+    <button 
+        onclick="cart_quantity += 3; console.log(`Cart Quantity: ${cart_quantity}`);">
+        +3
+    </button>
+
+    <button onclick="cart_quantity += 4; console.log(`Cart Quantity: ${cart_quantity}`);">
+        +4
+    </button>
+    
+    <button onclick="cart_quantity += 5; console.log(`Cart Quantity: ${cart_quantity}`);">
+        +5
+    </button>
+
+    <button onclick="cart_quantity -= 1; console.log(`Cart Quantity: ${cart_quantity}`);">
+        Remove From Cart
+    </button>
+
+    <button onclick="cart_quantity -= 2; console.log(`Cart Quantity: ${cart_quantity}`);">
+        -2
+    </button>
+    
+    <button onclick="cart_quantity -= 3; console.log(`Cart Quantity: ${cart_quantity}`);">
+        -3
+    </button>
+    
+    <button
+        onclick="cart_quantity = 0; console.log('Cart was reset.'); console.log(`Cart Quantity: ${cart_quantity}`);">
+        Reset Cart
+    </button>
+
+
+    <!--Javascript-->
+    <script>
+        let variable1 = 3;
+        console.log(variable1)
+
+        let calculation = 2 + 2
+        console.log(calculation)
+        console.log(calculation + 2)
+
+        let result = calculation + 2
+        console.log(result)
+
+        let message = "Hello"
+        console.log(message)
+
+        /*
+        Variable Name Restrictions
+        - Cannot use special words like "let" as a variable name.
+        - Cannot start with a number
+        - Cannot use special characters except $ or _
+        */
+
+
+        /*
+        Syntax Rules for Reassigning a Value
+        - We do not use the word "let" when reassigning a variable.
+        - We just type the variable name.
+        */
+        variable1 = 5
+        console.log(variable1) //this will return 5 and not 3 because we are reassigning a value
+
+        variable1 = variable1 + 1
+        console.log(variable1) // We can reassign a variable as many times as we want
+
+
+        /*Different Ways to Make a Variable and typeof*/
+       let test1 = 123
+       const test2 = 456 //const means that we cannot change this variable and is recommended to be used
+       var test3 = 789 //this method is not recommended
+       console.log(typeof 3)
+       console.log(typeof test1)
+    </script>
+
+    <script>
+        let cart_quantity = 0
+    </script>
+
+</body>
+</html>
