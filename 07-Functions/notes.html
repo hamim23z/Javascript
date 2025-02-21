@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 - Functions</title>
+</head>
+<body>
+    <!--
+    A function is used because it lets us reuse code. 
+        - Start off with the function keyword. 
+        - Then we choose the function name. 
+        - Then we do (). And then we do {code goes here}.
+        - To actually run the function, need to call the function
+            - function_name()
+        - Functions also create their own scope. 
+        - We can return something from a function, it can return anything with a value. 
+            - We don't have to return anything. 
+        - Using a return statement ends the program immediately. Nothing after will run.
+        
+        
+    A parameter puts a value in a function
+        - It works the same way as a variable. 
+        - It goes inside the () of a function
+        - A parameter only exists within the function scope. 
+        - Functions can have more than one parameter
+        - Parameters can have default values, we just set them with =
+    -->
+
+
+
+
+
+    <script>
+        /*
+        function function1() {
+            console.log("Hello")
+            console.log(2+2)
+        }
+
+        function1();
+        */
+
+
+        function calculateTax(parameter1) {
+            console.log(parameter1 * 0.1)
+        }
+        calculateTax(2000)
+        calculateTax(5000)
+    </script>
+</body>
+</html>
