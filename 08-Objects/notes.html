@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08 - Objects</title>
+</head>
+<body>
+    <!--
+    An object groups multiple values together.
+        - On the left of the : we have the property. 
+        - We can console.log the property. 
+        - We can also use the property to make changes to certain values. 
+        - To make an object, we enclose all the information inside of {}. 
+        - Inside the {}, we can put multiple values. It follows the property: value. 
+        - It is called the property value pair. 
+        - We can add new properties by simply doing objectname.propertyname = ""
+        - We can remove new properties by doing delete objectname.propertyname
+
+        - We use objects to make our code easier to read. It helps us use multiple values together.
+    -->
+
+
+
+
+
+    <script>
+        //this is an object. 
+        const product = {
+            name: 'socks',
+            price: 1090
+        }; 
+        console.log(product.name)
+        console.log(product.price)
+        product.name = 'Cotton Socks'
+        console.log(product.name)
+        
+        product.newproperty = true
+        console.log(product)
+
+        console.log(typeof product)
+    </script>
+</body>
+</html>

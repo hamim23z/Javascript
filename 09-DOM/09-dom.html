@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>Hello, click me</button>
+    <button class="js-button">Second button</button>
+
+
+    <!--
+    The DOM is another built in object. It gives Javascript full control of the webpage. The most common tool that we will be using 
+    is "document". We use the dot notation because we are accessing a property of the document. 
+    • The document object is linked to the webpage. This represents/models the webpage. 
+    • The DOM combines HTML and Javascript together.
+    -->
+
+
+    <!--
+    Syntax Rules
+        • If we change certain properties in the DOM, it also changes in the webpage. 
+        • There are also methods that we can use with document. 
+    -->
+
+
+    <!--
+    Properties and Methods
+        • document.title is used to get the title of the webpage.
+        
+        • document.body is used to get the actual body from the HTML code. It returns the code and when we hover over, it shows 
+        exactly what is inside the body. This is the most important feature because it shows we can have HTML inside Javascript.
+        • When an HTML element is inside Javascript, the element is converted into a Javascript object. 
+
+        • document.body.innerHTML returns all of the HTML from the webpage. This gives us control of all the HTML in the body. 
+        • Using innerHTML, we can also replace the HTML with buttons or headers or footers, etc. We can replace it to whatever we want.
+        • Every HTML element has a property called .innerHTML which lets us control the element and that can be represented by
+        document.body.querySelector('button').innerHTML
+
+        Now onto methods. A method is a function saved inside an object.
+
+        • document.querySelector('element') lets us get any element from the page and put it inside Javascript.
+        • This gets any element from the page and puts it inside Javascript. 
+    -->
+
+
+    <script>
+    /*
+      document.body.innerHTML = 'hello' //this removes everything on the page and replaces it with hello.
+      document.title = "LeBron James" //this changes the title at the top of the tab
+    */
+
+
+    /*
+    console.log(document.title) //this returns the name of the webpage in the console.
+    console.log(document.body) //this returns everything inside the body
+    console.log(typeof document.body) //returns object
+    console.log(document.body.innerHTML) //returns all of the HTML on the site
+    */
+
+    
+    console.log(document.querySelector('button')) //this gets the button from HTML and puts it inside our Javascript
+    console.log(document.querySelector('button').innerHTML) //this just returns the HTML inside the button
+    console.log(document.querySelector('.js-button')) //this now looks for a class called js-button, that is why we need the . in the front
+    console.log(document.querySelector('.js-button').innerHTML) //this just returns the HTML inside the button now too
+
+
+    const secondButtonElement = document.querySelector('.js-button')
+    console.log(secondButtonElement)
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
