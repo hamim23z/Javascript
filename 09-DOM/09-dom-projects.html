@@ -1,30 +1,82 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>DOM Projects</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <p>YouTube Subscribe Button</p>
-    <button onclick="
+    <button
+      onclick="
         subscribe();
-    " class="js-subscribe-button">
-        Subscribe
+    "
+      class="js-subscribe-button"
+    >
+      Subscribe
     </button>
 
-
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input
+      type="text"
+      placeholder="Cost of order "
+      class="js-cost-input"
+      onkeydown="
+        handleCostKeyDown(event);
+    "
+    />
+    <button
+      onclick="
+        calculateTotal()
+    "
+    >
+      Calculate
+    </button>
+    <p class="js-total-cost"></p>
 
     <script>
-        function subscribe() {
-            const buttonElement = document.querySelector('.js-subscribe-button')
+      function subscribe() {
+        const buttonElement = document.querySelector(".js-subscribe-button");
 
-            if (buttonElement.innerHTML === 'Subscribe') {
-                buttonElement.innerHTML = 'Subscribed'
-            }
-            else { buttonElement.innerHTML = 'Subscribe' }
+        if (buttonElement.innerHTML === "Subscribe") {
+          buttonElement.innerHTML = "Subscribed";
+        } else {
+          buttonElement.innerHTML = "Subscribe";
         }
-    </script>
-</body>
+      }
 
+      //whenever we get a value from the DOM, the value will be a string.
+      //thus if we want to do math with it, we need to use the Number() function to convert it
+      //we can convert number to a string by doing String()
+      //clicks and keydowns are known as events
+      //onclick and onkeydown are event listeners
+
+      function calculateTotal() {
+        const inputElement = document.querySelector(".js-cost-input");
+        let cost = Number(inputElement.value);
+
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+
+        document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+      }
+
+      function handleCostKeyDown(event) {
+        if (event.key === "Enter") {
+          calculateTotal();
+        }
+      }
+
+      window.document
+      window.console.log('window')
+      window.alert('hello')
+      //window is a built in javascript object that represents elements in the window.
+      //we dont have to type in window before everything because js automatically handles it
+
+
+
+    </script>
+  </body>
 </html>
